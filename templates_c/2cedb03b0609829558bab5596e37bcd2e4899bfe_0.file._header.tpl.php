@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.22-dev/30, created on 2018-02-06 16:36:34
+<?php /* Smarty version 3.1.22-dev/30, created on 2018-02-06 17:50:15
          compiled from "predlosci/_header.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:5235171615a79cb82c445c2_88995637%%*/
+/*%%SmartyHeaderCode:13828260865a79dcc7f31199_95368857%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,21 +9,21 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '2cedb03b0609829558bab5596e37bcd2e4899bfe' => 
     array (
       0 => 'predlosci/_header.tpl',
-      1 => 1517929508,
+      1 => 1517935717,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '5235171615a79cb82c445c2_88995637',
+  'nocache_hash' => '13828260865a79dcc7f31199_95368857',
   'has_nocache_code' => false,
   'version' => '3.1.22-dev/30',
-  'unifunc' => 'content_5a79cb82c66f10_91323745',
+  'unifunc' => 'content_5a79dcc80101a7_20840863',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5a79cb82c66f10_91323745')) {
-function content_5a79cb82c66f10_91323745 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5a79dcc80101a7_20840863')) {
+function content_5a79dcc80101a7_20840863 ($_smarty_tpl) {
 ?>
 <?php
-$_smarty_tpl->properties['nocache_hash'] = '5235171615a79cb82c445c2_88995637';
+$_smarty_tpl->properties['nocache_hash'] = '13828260865a79dcc7f31199_95368857';
 ?>
 <!DOCTYPE html>
 <html>
@@ -50,8 +50,13 @@ $_smarty_tpl->properties['nocache_hash'] = '5235171615a79cb82c445c2_88995637';
 
         <aside><nav>
                 <ul>
-                    <li><a href="dokumentacija.html" >Dokumentacija</a></li>
-                    <li><a href="o_autoru.html" >O autoru</a></li>
+                    <li><a href="index.php" >Početna stranica</a></li>
+                     <li><a href="registracija.php" >Registracija</a></li>
+                     <li><a href="rangLista.php" >Rang lista</a></li>
+                    <li><a href="ispisZaposlenika.php" >Zaposlenici</a></li>
+                    <li><a href="ispisKorisnika.php" >Korisnici</a></li>
+                    <li><a href="prijavaKvara.php" >Prijava kvara</a></li>
+                    <li><a href="biljezenjeGostiju.php" >Bilježenje vanjskih gostiju</a></li>
                 </ul>
             </nav>
         </aside>

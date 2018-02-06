@@ -43,9 +43,9 @@ nav{
 }
 #sadrzaj{
     float: left;
-    width: 70%;
+    width: 50%;
     margin-left: 40%;
-    margin-top: -7%;
+    margin-top: -22%;
 }
 #body {
    width: 90%;
@@ -67,4 +67,9 @@ body {
 header {
     width: 100%;
     font-weight: bolder;
+}
+#kvar{
+  background-color: #eaeaea;
+  width: 55%;
+  text-align: center;
 }

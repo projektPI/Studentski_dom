@@ -2,9 +2,9 @@
         // put your code here
         class Baza{
             const server = "localhost";
-            const baza ="WebDiP2015x012";
-            const korisnik ="WebDiP2015x012";
-            const lozinka = "admin_TY2Y";
+            const baza ="pi";
+            const korisnik ="root";
+            const lozinka = "";
        
            private function spojiDB(){
                 $mysqli=new mysqli(self::server, self::korisnik, self::lozinka,self::baza);             

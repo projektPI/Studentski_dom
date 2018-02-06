@@ -23,8 +23,13 @@
 
         <aside><nav>
                 <ul>
-                    <li><a href="dokumentacija.html" >Dokumentacija</a></li>
-                    <li><a href="o_autoru.html" >O autoru</a></li>
+                    <li><a href="index.php" >Početna stranica</a></li>
+                     <li><a href="registracija.php" >Registracija</a></li>
+                     <li><a href="rangLista.php" >Rang lista</a></li>
+                    <li><a href="ispisZaposlenika.php" >Zaposlenici</a></li>
+                    <li><a href="ispisKorisnika.php" >Korisnici</a></li>
+                    <li><a href="prijavaKvara.php" >Prijava kvara</a></li>
+                    <li><a href="biljezenjeGostiju.php" >Bilježenje vanjskih gostiju</a></li>
                 </ul>
             </nav>
         </aside>
