@@ -1,0 +1,3 @@
+<?php
+echo "bok, drugari";
+?>
