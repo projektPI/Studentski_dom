@@ -35,9 +35,12 @@ nav{
     width: 18%
 }
 #footer{
-    position:absolute;
+    position:relative;
     clear: both;
     bottom:0;
+    z-index: 10;
+    height: 3em;
+    margin-top: -3em;
     width: 95%;
     text-align: center
 }
@@ -45,12 +48,14 @@ nav{
     float: left;
     width: 50%;
     margin-left: 40%;
-    margin-top: -22%;
+    margin-top: -24%;
 }
 #body {
-   width: 90%;
+   width: 100%;
    padding:10px;
-   padding-bottom:60px;   
+   padding-bottom:6rem;  
+   position:relative;
+   min-height: 100%;
 }
 #odjava{
     display:inline-block;
@@ -72,4 +77,15 @@ header {
   background-color: #eaeaea;
   width: 55%;
   text-align: center;
+}
+#ispisKorisnika{
+    width: 55%;
+    background-color: #eaeaea;
+    margin-left: 20%;
+    margin-top: 2%;
+}
+#greske{
+    margin-top: 33px;
+    margin-left: 60%;
+    color:red;
 }

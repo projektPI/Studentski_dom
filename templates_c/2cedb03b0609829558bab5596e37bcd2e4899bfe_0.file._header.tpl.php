@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.22-dev/30, created on 2018-02-06 17:50:15
+<?php /* Smarty version 3.1.22-dev/30, created on 2018-02-06 22:58:15
          compiled from "predlosci/_header.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:13828260865a79dcc7f31199_95368857%%*/
+/*%%SmartyHeaderCode:11395132405a7a24f782c5b3_69143495%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,21 +9,21 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '2cedb03b0609829558bab5596e37bcd2e4899bfe' => 
     array (
       0 => 'predlosci/_header.tpl',
-      1 => 1517935717,
+      1 => 1517954287,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '13828260865a79dcc7f31199_95368857',
+  'nocache_hash' => '11395132405a7a24f782c5b3_69143495',
   'has_nocache_code' => false,
   'version' => '3.1.22-dev/30',
-  'unifunc' => 'content_5a79dcc80101a7_20840863',
+  'unifunc' => 'content_5a7a24f7853ca5_23055199',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5a79dcc80101a7_20840863')) {
-function content_5a79dcc80101a7_20840863 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5a7a24f7853ca5_23055199')) {
+function content_5a7a24f7853ca5_23055199 ($_smarty_tpl) {
 ?>
 <?php
-$_smarty_tpl->properties['nocache_hash'] = '13828260865a79dcc7f31199_95368857';
+$_smarty_tpl->properties['nocache_hash'] = '11395132405a7a24f782c5b3_69143495';
 ?>
 <!DOCTYPE html>
 <html>
@@ -35,7 +35,9 @@ $_smarty_tpl->properties['nocache_hash'] = '13828260865a79dcc7f31199_95368857';
         <meta name="authors" content="Petar Crnjak, Anja Slobodnjak, Ivana Puja, Nada Cvitković">
         <meta name="description" content="Datum izrade: 1.2.2018"> 
         <link rel="stylesheet" type="text/css" href="css/dizajn.css" media="screen" rel="stylesheet"/>
-        
+        <?php echo '<script'; ?>
+ src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"><?php echo '</script'; ?>
+>
         </head>
         <body>
             <div id="header">
@@ -55,6 +57,7 @@ $_smarty_tpl->properties['nocache_hash'] = '13828260865a79dcc7f31199_95368857';
                      <li><a href="rangLista.php" >Rang lista</a></li>
                     <li><a href="ispisZaposlenika.php" >Zaposlenici</a></li>
                     <li><a href="ispisKorisnika.php" >Korisnici</a></li>
+                    <li><a href="azuriranje.php" >Ažuriranje korisnika</a></li>
                     <li><a href="prijavaKvara.php" >Prijava kvara</a></li>
                     <li><a href="biljezenjeGostiju.php" >Bilježenje vanjskih gostiju</a></li>
                 </ul>

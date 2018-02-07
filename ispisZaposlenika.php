@@ -8,7 +8,7 @@ $korisnik=array();
 
 //$korisnik=$_SESSION['korisnik'];
 
-$upit="select k.ime,k.prezime,k.userName,k.email,k.adresa,k.mjesto,k.drzava,k.telefon,k.xica,t.naziv from korisnik as k join tip_korisnika as t on k.tipKorisnika=t.ID_tipKorisnika where k.tipKorisnika='2'";
+$upit="select k.ime,k.prezime,k.userName,k.email,k.adresa,k.mjesto,k.drzava,k.telefon,k.xica,t.naziv from korisnik as k join tip_korisnika as t on k.tipKorisnika=t.ID_tipKorisnika where k.tipKorisnika='1'";
 $korisnici=$baza->selectDB($upit);
 
 require_once 'vanjske_biblioteke/smarty/libs/Smarty.class.php';

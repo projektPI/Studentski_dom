@@ -8,7 +8,7 @@
         <meta name="authors" content="Petar Crnjak, Anja Slobodnjak, Ivana Puja, Nada Cvitković">
         <meta name="description" content="Datum izrade: 1.2.2018"> 
         <link rel="stylesheet" type="text/css" href="css/dizajn.css" media="screen" rel="stylesheet"/>
-        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         </head>
         <body>
             <div id="header">
@@ -28,6 +28,7 @@
                      <li><a href="rangLista.php" >Rang lista</a></li>
                     <li><a href="ispisZaposlenika.php" >Zaposlenici</a></li>
                     <li><a href="ispisKorisnika.php" >Korisnici</a></li>
+                    <li><a href="azuriranje.php" >Ažuriranje korisnika</a></li>
                     <li><a href="prijavaKvara.php" >Prijava kvara</a></li>
                     <li><a href="biljezenjeGostiju.php" >Bilježenje vanjskih gostiju</a></li>
                 </ul>
