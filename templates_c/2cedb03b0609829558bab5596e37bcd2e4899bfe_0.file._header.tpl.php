@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.22-dev/30, created on 2018-02-06 22:58:15
+<?php /* Smarty version 3.1.22-dev/30, created on 2018-02-14 23:21:49
          compiled from "predlosci/_header.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:11395132405a7a24f782c5b3_69143495%%*/
+/*%%SmartyHeaderCode:10584060485a84b67d011651_71142465%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,21 +9,21 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '2cedb03b0609829558bab5596e37bcd2e4899bfe' => 
     array (
       0 => 'predlosci/_header.tpl',
-      1 => 1517954287,
+      1 => 1518646615,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '11395132405a7a24f782c5b3_69143495',
+  'nocache_hash' => '10584060485a84b67d011651_71142465',
   'has_nocache_code' => false,
   'version' => '3.1.22-dev/30',
-  'unifunc' => 'content_5a7a24f7853ca5_23055199',
+  'unifunc' => 'content_5a84b67d031d30_82216616',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5a7a24f7853ca5_23055199')) {
-function content_5a7a24f7853ca5_23055199 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5a84b67d031d30_82216616')) {
+function content_5a84b67d031d30_82216616 ($_smarty_tpl) {
 ?>
 <?php
-$_smarty_tpl->properties['nocache_hash'] = '11395132405a7a24f782c5b3_69143495';
+$_smarty_tpl->properties['nocache_hash'] = '10584060485a84b67d011651_71142465';
 ?>
 <!DOCTYPE html>
 <html>
@@ -60,6 +60,7 @@ $_smarty_tpl->properties['nocache_hash'] = '11395132405a7a24f782c5b3_69143495';
                     <li><a href="azuriranje.php" >Ažuriranje korisnika</a></li>
                     <li><a href="prijavaKvara.php" >Prijava kvara</a></li>
                     <li><a href="biljezenjeGostiju.php" >Bilježenje vanjskih gostiju</a></li>
+                    <li><a href="mojiRacuni.php" >Moji računi   </a></li>
                 </ul>
             </nav>
         </aside>

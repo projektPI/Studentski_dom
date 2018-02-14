@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $greska.= "Popunite sva polja<br>";
     }
     else{
-        $izmjena="INSERT INTO prijavaKvara values ('$opisKvara', '$brojSobe', '$datum', '$korsinik') ";
+        $izmjena="INSERT INTO prijavaKvara values ('$opisKvara', '$brojSobe', '$datum', '$korisnik') ";
         $podaci=$baza->selectDB($izmjena);
         if ($podaci == null) {
          $greska.= "Greška kod izmjene!<br>";

@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($posjetitelj) || empty($brojSobe)) {
         $greska .= "Popunite sva polja<br>";
     } else {
-        $izmjena = "INSERT INTO evidencija values ('$brojSobe', '$stanar', '$posjetitelj', '$vrijemeOD', null, '$datum') ";
+        $izmjena = "INSERT INTO evidencija values (Default,'$stanar', '$brojSobe','$posjetitelj', '$vrijemeOD', null, '$datum') ";
         $podaci = $baza->selectDB($izmjena);
         if ($podaci == null) {
             $greska .= "Greška kod unosa!<br>";

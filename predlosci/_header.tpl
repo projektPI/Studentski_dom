@@ -31,6 +31,7 @@
                     <li><a href="azuriranje.php" >Ažuriranje korisnika</a></li>
                     <li><a href="prijavaKvara.php" >Prijava kvara</a></li>
                     <li><a href="biljezenjeGostiju.php" >Bilježenje vanjskih gostiju</a></li>
+                    <li><a href="mojiRacuni.php" >Moji računi   </a></li>
                 </ul>
             </nav>
         </aside>

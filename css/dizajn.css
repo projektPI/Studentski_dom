@@ -78,6 +78,11 @@ header {
   width: 55%;
   text-align: center;
 }
+#table-container{
+  background-color: #eaeaea;
+  width: 55%;
+  margin-left: 20%;
+}
 #ispisKorisnika{
     width: 55%;
     background-color: #eaeaea;
