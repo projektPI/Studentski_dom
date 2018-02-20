@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.22-dev/30, created on 2018-02-14 23:21:49
+<?php /* Smarty version 3.1.22-dev/30, created on 2018-02-17 18:59:48
          compiled from "predlosci/_header.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:10584060485a84b67d011651_71142465%%*/
+/*%%SmartyHeaderCode:3589666425a886d942283a4_63237766%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,21 +9,21 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '2cedb03b0609829558bab5596e37bcd2e4899bfe' => 
     array (
       0 => 'predlosci/_header.tpl',
-      1 => 1518646615,
+      1 => 1518890385,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '10584060485a84b67d011651_71142465',
+  'nocache_hash' => '3589666425a886d942283a4_63237766',
   'has_nocache_code' => false,
   'version' => '3.1.22-dev/30',
-  'unifunc' => 'content_5a84b67d031d30_82216616',
+  'unifunc' => 'content_5a886d9424b637_11313552',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5a84b67d031d30_82216616')) {
-function content_5a84b67d031d30_82216616 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5a886d9424b637_11313552')) {
+function content_5a886d9424b637_11313552 ($_smarty_tpl) {
 ?>
 <?php
-$_smarty_tpl->properties['nocache_hash'] = '10584060485a84b67d011651_71142465';
+$_smarty_tpl->properties['nocache_hash'] = '3589666425a886d942283a4_63237766';
 ?>
 <!DOCTYPE html>
 <html>
@@ -38,9 +38,9 @@ $_smarty_tpl->properties['nocache_hash'] = '10584060485a84b67d011651_71142465';
         <?php echo '<script'; ?>
  src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"><?php echo '</script'; ?>
 >
-        </head>
-        <body>
-            <div id="header">
+    </head>
+    <body>
+        <div id="header">
             <figure>
                 <h1 id="pocetak">Studentski dom</h1>
 
@@ -53,14 +53,17 @@ $_smarty_tpl->properties['nocache_hash'] = '10584060485a84b67d011651_71142465';
         <aside><nav>
                 <ul>
                     <li><a href="index.php" >Početna stranica</a></li>
-                     <li><a href="registracija.php" >Registracija</a></li>
-                     <li><a href="rangLista.php" >Rang lista</a></li>
+                    <li><a href="registracija.php" >Registracija</a></li>
+                    <li><a href="rangLista.php" >Rang lista</a></li>
                     <li><a href="ispisZaposlenika.php" >Zaposlenici</a></li>
                     <li><a href="ispisKorisnika.php" >Korisnici</a></li>
                     <li><a href="azuriranje.php" >Ažuriranje korisnika</a></li>
                     <li><a href="prijavaKvara.php" >Prijava kvara</a></li>
                     <li><a href="biljezenjeGostiju.php" >Bilježenje vanjskih gostiju</a></li>
                     <li><a href="mojiRacuni.php" >Moji računi   </a></li>
+                    <li><a href="zahtjevZaIzlazak.php" >Zahtjev za izlazak </a></li>
+                    <li><a href="izdavanjeRacuna.php" >Izdavanje računa </a></li>
+
                 </ul>
             </nav>
         </aside>

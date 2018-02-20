@@ -9,9 +9,9 @@
         <meta name="description" content="Datum izrade: 1.2.2018"> 
         <link rel="stylesheet" type="text/css" href="css/dizajn.css" media="screen" rel="stylesheet"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        </head>
-        <body>
-            <div id="header">
+    </head>
+    <body>
+        <div id="header">
             <figure>
                 <h1 id="pocetak">Studentski dom</h1>
 
@@ -24,14 +24,17 @@
         <aside><nav>
                 <ul>
                     <li><a href="index.php" >Početna stranica</a></li>
-                     <li><a href="registracija.php" >Registracija</a></li>
-                     <li><a href="rangLista.php" >Rang lista</a></li>
+                    <li><a href="registracija.php" >Registracija</a></li>
+                    <li><a href="rangLista.php" >Rang lista</a></li>
                     <li><a href="ispisZaposlenika.php" >Zaposlenici</a></li>
                     <li><a href="ispisKorisnika.php" >Korisnici</a></li>
                     <li><a href="azuriranje.php" >Ažuriranje korisnika</a></li>
                     <li><a href="prijavaKvara.php" >Prijava kvara</a></li>
                     <li><a href="biljezenjeGostiju.php" >Bilježenje vanjskih gostiju</a></li>
                     <li><a href="mojiRacuni.php" >Moji računi   </a></li>
+                    <li><a href="zahtjevZaIzlazak.php" >Zahtjev za izlazak </a></li>
+                    <li><a href="izdavanjeRacuna.php" >Izdavanje računa </a></li>
+
                 </ul>
             </nav>
         </aside>

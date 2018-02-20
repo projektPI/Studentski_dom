@@ -7,21 +7,24 @@ $table="";
 $baza = new Baza();
 $korisnik=array();
 
-//$korisnik=$_SESSION['korisnik'];
 if (!isset($_SESSION['korisnickoIme'])) {
-    $greska .= "Morate biti prijavljeni!<br>";
+    $greska.= "Morate biti prijavljeni!<br>";
     header("Location:prijava.php");
-    exit();
+    //exit();
 }
 $tipKorisnikaPrijava=$_SESSION['tipKorisnika'];
+
 if ($tipKorisnikaPrijava!=1) {
     $greska="Samo recepcionar i administrator mogu prostupiti";
     header("Location:prijava.php");
 }
-$upit="select k.ime,k.prezime,k.userName,k.email,k.adresa,k.mjesto,k.drzava,k.telefon,k.xica,t.naziv, k.tipKorisnika "
-        . "from korisnik as k join tip_korisnika as t on k.tipKorisnika=t.ID_tipKorisnika "
-        . "where k.tipKorisnika='1' or k.tipKorisnika='4'"
-        . "order by 11,2";
+$prijavljeniKorisnik = $_SESSION['id_korisnik'];
+$upit="select r.*,s.*,k.*"
+      . "from racun as r join studentskiCentar as s "
+      . "on r.ID_racun=s.racun "
+        . "join korisnik as k "
+        . "on k.ID_korisnik=r.korisnik "
+        . "order by r.datum, k.prezime";
 $korisnici=$baza->selectDB($upit);
 
 require_once 'vanjske_biblioteke/smarty/libs/Smarty.class.php';
@@ -36,7 +39,7 @@ $smarty->assign(array(
    'korisnici'=>$korisnici
 ));
 $smarty->display('_header.tpl');
-$smarty->display('ispisKorisnika.tpl');
+$smarty->display('studentskiCentar.tpl');
 $smarty->display('_footer.tpl');
 ?>
 

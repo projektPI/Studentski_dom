@@ -1,19 +1,19 @@
-<?php /* Smarty version 3.1.22-dev/30, created on 2018-02-19 19:02:13
-         compiled from "predlosci/rangLista.tpl" */ ?>
+<?php /* Smarty version 3.1.22-dev/30, created on 2018-02-18 19:04:57
+         compiled from "predlosci/rangLista1.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:2185927145a8b11259e2e41_44262149%%*/
+/*%%SmartyHeaderCode:17460709975a89c049693539_10876689%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '4b685bf05425382237631f96e3cf171a24b0dc90' => 
+    '9b34c475a1f266e7b72a699828bacf00af76aeca' => 
     array (
-      0 => 'predlosci/rangLista.tpl',
-      1 => 1518977118,
+      0 => 'predlosci/rangLista1.tpl',
+      1 => 1518977096,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2185927145a8b11259e2e41_44262149',
+  'nocache_hash' => '17460709975a89c049693539_10876689',
   'variables' => 
   array (
     'greska' => 0,
@@ -22,35 +22,23 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.22-dev/30',
-  'unifunc' => 'content_5a8b1125a620b5_94154486',
+  'unifunc' => 'content_5a89c0496c0ab3_47941013',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5a8b1125a620b5_94154486')) {
-function content_5a8b1125a620b5_94154486 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5a89c0496c0ab3_47941013')) {
+function content_5a89c0496c0ab3_47941013 ($_smarty_tpl) {
 ?>
 <?php
-$_smarty_tpl->properties['nocache_hash'] = '2185927145a8b11259e2e41_44262149';
+$_smarty_tpl->properties['nocache_hash'] = '17460709975a89c049693539_10876689';
 ?>
 <section class="sadrzaj">
     <article id="greske"> <?php echo $_smarty_tpl->tpl_vars['greska']->value;?>
  </article>
     <article id="ispisKorisnika">
-        <h2 style="text-align: center" >Korisnici</h2>
+        <h2 style="text-align: center" >Rang lista</h2>
  
         <div id="table-container"> 
-             <form name="rang" id="rang" method="POST" enctype='multipart/form-data' action="rangLista.php">
-
-            <label for="kategorija">Promjeni datum zaključavanja: </label>
-            <input type="date" name="datum" id="datum"><br/>
-            <label for="kategorija">Promjeni vrijeme zaključavanja: </label>
-            <input type="time" name="vrijeme" id="vrijeme" ><br/>
-            <label for="kategorija">Broj mjesta: </label>
-            <input type="number" name="brojMjesta" id="brojMjesta"><br/><br>
             
-            <input name="potvrda" id="potvrda" type="submit" value="Unesi" class="gumb">   
-            <input name="reset" id="reset" type="reset" value="Reset" class="gumb">
-
-             </form><br>
              <table border="1">
                  <thead>
                      <tr>

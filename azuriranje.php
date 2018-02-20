@@ -1,4 +1,5 @@
 <?php
+session_start();
 header('Content-Type: text/html; charset=utf-8');
 include_once './baza.class.php';
 $greska = "";
@@ -6,11 +7,23 @@ $korisnici1="";
 $baza = new Baza();
 $korisnik=array();
 
-//$korisnik=$_SESSION['korisnik'];
-$upit = "select k.ID_korisnik,k.prezime,k.ime from korisnik as k join tip_korisnika as t on k.tipKorisnika=t.ID_tipKorisnika where k.tipKorisnika='2' order by 2";
+if (!isset($_SESSION['korisnickoIme'])) {
+    $greska .= "Morate biti prijavljeni!<br>";
+    header("Location:prijava.php");
+    exit();
+}
+$tipKorisnikaPrijava=$_SESSION['tipKorisnika'];
+
+$upit = "select k.ID_korisnik,k.prezime,k.ime "
+        . "from korisnik as k join tip_korisnika as t "
+        . "on k.tipKorisnika=t.ID_tipKorisnika "
+        . "where k.tipKorisnika='2' or '3' or '4'"
+        . "order by 2";
 $korisnici=$baza->selectDB($upit);
 
-$upit2="select t.ID_tipKorisnika,t.naziv from tip_korisnika as t order by 2 desc";
+$upit2="select t.ID_tipKorisnika,t.naziv "
+        . "from tip_korisnika as t "
+        . "order by 2 desc";
 $tipovi=$baza->selectDB($upit2);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -32,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $izmjena="UPDATE korisnik "
                 . "SET ime='$ime', prezime='$prezime', userName='$korisnickoIme', email='$email', adresa='$adresa', mjesto='$mjesto', drzava='$drzava', telefon='$telefon', xica='$xica', tipKorisnika='$tipKorisnika' "
                 . "WHERE ID_korisnik = '$odabraniKorisnik'";
-        $podaci=$baza->selectDB($izmjena);
+        $podaci=$baza->updateDB($izmjena);
         if ($podaci == null) {
          $greska.= "Greška kod izmjene!<br>";
         }
@@ -48,6 +61,7 @@ require_once 'ukljuciSmarty.php';
 $smarty = new Smarty();
 $obj = new UkljuciSmarty($smarty);
 $smarty->assign('greska', $greska);
+$smarty->assign('tipKorisnikaPrijava', $tipKorisnikaPrijava);
 $smarty->assign(array(
    'naslov' =>'Korisnici' ,
    'korisnik'=>$korisnik,

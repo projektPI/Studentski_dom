@@ -1,22 +1,10 @@
 <section class="sadrzaj">
     <article id="greske"> {$greska} </article>
     <article id="ispisKorisnika">
-        <h2 style="text-align: center" >Korisnici</h2>
+        <h2 style="text-align: center" >Rang lista</h2>
  
         <div id="table-container"> 
-             <form name="rang" id="rang" method="POST" enctype='multipart/form-data' action="rangLista.php">
-
-            <label for="kategorija">Promjeni datum zaključavanja: </label>
-            <input type="date" name="datum" id="datum"><br/>
-            <label for="kategorija">Promjeni vrijeme zaključavanja: </label>
-            <input type="time" name="vrijeme" id="vrijeme" ><br/>
-            <label for="kategorija">Broj mjesta: </label>
-            <input type="number" name="brojMjesta" id="brojMjesta"><br/><br>
             
-            <input name="potvrda" id="potvrda" type="submit" value="Unesi" class="gumb">   
-            <input name="reset" id="reset" type="reset" value="Reset" class="gumb">
-
-             </form><br>
              <table border="1">
                  <thead>
                      <tr>

@@ -1,7 +1,7 @@
 <section class="sadrzaj">
     <article id="greske"> {$greska} </article>
     <article id="ispisKorisnika">
-        <h2 style="text-align: center" >Korisnici</h2>
+        <h2 style="text-align: center" >Računi</h2>
  
         <div id="table-container"> 
              <table border="1">
@@ -11,7 +11,9 @@
                     <th>Datum izdavanja</th>
                     <th>Vrijeme izdavanja</th>
                     <th>Iznos</th>
+                    <th>Obrađeno</th>
                     <th>Plaćeno</th>
+                    <th>Korsinik</th>
                     </tr>
                  </thead>
                  <tbody>
@@ -22,7 +24,9 @@
                              <td>{$korisnik.datum}</td>
                              <td>{$korisnik.vrijeme}</td>
                              <td>{$korisnik.iznos}</td>
+                             <td>{if ($korisnik.obradjeno==0)}ne {/if}</td>
                              <td>{if ($korisnik.placeno==0)}ne {/if}</td>
+                             <td>{$korisnik.prezime} {$korisnik.ime}</td>
                          </tr>
                          {/foreach}
                  </tbody>

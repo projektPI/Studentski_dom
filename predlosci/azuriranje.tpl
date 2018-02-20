@@ -8,12 +8,13 @@
 
             <label for="biraniKorisnik">Izaberite korisnika: </label><br>
             <select name="korisnici" id="korisnici">
+                {if ($tipKorisnikaPrijava=='1')}
                 {foreach from=$korisnici item=korisnik}
                     <option value="{$korisnik.ID_korisnik}">{$korisnik.prezime} {$korisnik.ime}</option>
                 {/foreach}
+                {/if}
             </select><br>
         <br>
-        
             <label for="kategorija">Ime: </label>
             <input type="text" id="ime" name="ime"  size="20" placeholder="ime" {if isset($korisnik.ime)}value="{$korisnik.ime}{/if}"><br>
             <label for="kategorija">Prezime: </label>
@@ -37,7 +38,8 @@
                 {foreach from=$tipovi item=korisnik2}
                     <option value="{$korisnik2.ID_tipKorisnika}">{$korisnik2.naziv}</option>
                     {if isset($korisnik.ID_tipKorisnika)}
-                    <option selected value="{$korisnik.ID_tipKorisnika}">{$korisnik.naziv}</option>{/if}
+                    <option value="{$korisnik.ID_tipKorisnika}">{$korisnik.naziv}</option>
+                    {/if}
                 {/foreach}
             </select><br>
             <input name="azuriraj" id="azuriraj" type="submit" value="Ažuriraj" class="gumb">   
@@ -75,6 +77,7 @@
                     $("#drzava").val(response.korisnik.drzava);
                     $("#tel").val(response.korisnik.telefon);
                     $("#xica").val(response.korisnik.xica);
+                    $("#biraniTip").val(response.korisnik.ID_tipKorisnika);
                 }
             });
     }

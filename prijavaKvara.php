@@ -1,4 +1,5 @@
 <?php
+session_start();
 header('Content-Type: text/html; charset=utf-8');
 include_once './baza.class.php';
 $greska = "";
@@ -6,7 +7,7 @@ $baza = new Baza();
 
 if (!isset($_SESSION['korisnickoIme'])) {
     $greska.= "Morate biti prijavljeni!<br>";
-    //header("Location:index.php");
+    header("Location:prijava.php");
     //exit();
 }
 $korisnik = $_SESSION['id_korisnik'];
@@ -14,18 +15,18 @@ $korisnik = $_SESSION['id_korisnik'];
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $opisKvara = $_POST['opisKvara'];
     $brojSobe = $_POST['brojSobe'];
-    $datum= date("Y-m-d H:i:s");
+    $datum= date("Y-m-d");
     if (empty($opisKvara) || empty($brojSobe)) {
         $greska.= "Popunite sva polja<br>";
     }
     else{
-        $izmjena="INSERT INTO prijavaKvara values ('$opisKvara', '$brojSobe', '$datum', '$korisnik') ";
+        $izmjena="INSERT INTO prijavaKvara values ('default', '$opisKvara', '$datum', '$korisnik', '$brojSobe') ";
         $podaci=$baza->selectDB($izmjena);
         if ($podaci == null) {
-         $greska.= "Greška kod izmjene!<br>";
+         $greska.= "Greška kod prijave!<br>";
         }
         else{
-            $greska.= "Uspješno izmjenjeno!<br>";
+            $greska.= "Uspješno prijavljeno!<br>";
         }
     }
 }

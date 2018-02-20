@@ -1,19 +1,19 @@
-<?php /* Smarty version 3.1.22-dev/30, created on 2018-02-20 23:34:11
-         compiled from "predlosci/mojiRacuni.tpl" */ ?>
+<?php /* Smarty version 3.1.22-dev/30, created on 2018-02-21 00:00:28
+         compiled from "predlosci/studentskiCentar.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:2063045055a8ca263a025f0_16024590%%*/
+/*%%SmartyHeaderCode:19333451045a8ca88cb3c008_31279197%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '2fe476242cc06aa6dc13c814d41db84cbd7e5e44' => 
+    '9f4e3ec22bfb1593b9465f83ab13dbcef52e790a' => 
     array (
-      0 => 'predlosci/mojiRacuni.tpl',
-      1 => 1519166050,
+      0 => 'predlosci/studentskiCentar.tpl',
+      1 => 1519167599,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2063045055a8ca263a025f0_16024590',
+  'nocache_hash' => '19333451045a8ca88cb3c008_31279197',
   'variables' => 
   array (
     'greska' => 0,
@@ -22,20 +22,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.22-dev/30',
-  'unifunc' => 'content_5a8ca263a30b41_21057279',
+  'unifunc' => 'content_5a8ca88cb6d7b8_91256174',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5a8ca263a30b41_21057279')) {
-function content_5a8ca263a30b41_21057279 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5a8ca88cb6d7b8_91256174')) {
+function content_5a8ca88cb6d7b8_91256174 ($_smarty_tpl) {
 ?>
 <?php
-$_smarty_tpl->properties['nocache_hash'] = '2063045055a8ca263a025f0_16024590';
+$_smarty_tpl->properties['nocache_hash'] = '19333451045a8ca88cb3c008_31279197';
 ?>
 <section class="sadrzaj">
     <article id="greske"> <?php echo $_smarty_tpl->tpl_vars['greska']->value;?>
  </article>
     <article id="ispisKorisnika">
-        <h2 style="text-align: center" >Korisnici</h2>
+        <h2 style="text-align: center" >Računi</h2>
  
         <div id="table-container"> 
              <table border="1">
@@ -45,7 +45,9 @@ $_smarty_tpl->properties['nocache_hash'] = '2063045055a8ca263a025f0_16024590';
                     <th>Datum izdavanja</th>
                     <th>Vrijeme izdavanja</th>
                     <th>Iznos</th>
+                    <th>Obrađeno</th>
                     <th>Plaćeno</th>
+                    <th>Korsinik</th>
                     </tr>
                  </thead>
                  <tbody>
@@ -70,7 +72,11 @@ $foreachItemSav = $_smarty_tpl->tpl_vars['korisnik'];
 </td>
                              <td><?php echo $_smarty_tpl->tpl_vars['korisnik']->value['iznos'];?>
 </td>
+                             <td><?php if (($_smarty_tpl->tpl_vars['korisnik']->value['obradjeno']==0)) {?>ne <?php }?></td>
                              <td><?php if (($_smarty_tpl->tpl_vars['korisnik']->value['placeno']==0)) {?>ne <?php }?></td>
+                             <td><?php echo $_smarty_tpl->tpl_vars['korisnik']->value['prezime'];?>
+ <?php echo $_smarty_tpl->tpl_vars['korisnik']->value['ime'];?>
+</td>
                          </tr>
                          <?php
 $_smarty_tpl->tpl_vars['korisnik'] = $foreachItemSav;
