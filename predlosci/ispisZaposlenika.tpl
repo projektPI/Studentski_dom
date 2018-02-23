@@ -15,7 +15,6 @@
                     <th>Mjesto</th>
                     <th>Država</th>
                     <th>Telefon</th>
-                    <th>Xica</th>
                     <th>Tip korisnika</th>
                     </tr>
                  </thead>
@@ -31,7 +30,6 @@
                              <td>{$korisnik.mjesto}</td>
                              <td>{$korisnik.drzava}</td>
                              <td>{$korisnik.telefon}</td>
-                             <td>{$korisnik.xica}</td>
                              <td>{$korisnik.naziv}</td>
                          </tr>
                          {/foreach}

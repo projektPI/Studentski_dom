@@ -13,7 +13,14 @@ if (!isset($_SESSION['korisnickoIme'])) {
     header("Location:prijava.php");
     exit();
 }
+$korisnikID = $_SESSION['id_korisnik'];
 $tipKorisnikaPrijava=$_SESSION['tipKorisnika'];
+$upit = "select k.*"
+        . "from korisnik as k "
+        . "where k.ID_korisnik='$korisnikID'";
+$rez = $baza->selectDB($upit);
+$korisnik = mysqli_fetch_array($rez);
+
 if ($tipKorisnikaPrijava!=1) {
     $greska="Samo recepcionar i administrator mogu prostupiti";
     header("Location:prijava.php");
@@ -35,9 +42,10 @@ $smarty->assign(array(
    'korisnik'=>$korisnik,
    'korisnici'=>$korisnici
 ));
-$smarty->display('_header.tpl');
-$smarty->display('ispisKorisnika.tpl');
-$smarty->display('_footer.tpl');
+
+$smarty->display('_header_a_1.tpl');
+$smarty->display('ispisKorisnika_1.tpl');
+//$smarty->display('_footer.tpl');
 ?>
 
 

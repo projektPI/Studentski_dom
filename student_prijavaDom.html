@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Studentski centar</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/piprojektSvijetla.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+  
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Studentski centar</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Ime</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <div class="clear"></div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="student_pocetna.html">Novosti <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">Osobni podaci</a></li>
+            <li><a href="student_prijavaDom.html">Prijava za dom</a></li>
+            <li><a href="#">Rang lista</a></li>
+            <li><a href="#">Računi</a></li>
+            <li><a href="#">Prijava kvara</a></li>
+            <li><a href="zahtjev_za_izlazak.html">Prijava izlaska iz doma</a></li>
+            <li><a href="pi_projekt.html">Odjava</a></li>
+            </ul>
+        </div>
+
+    <div class="container-unos">
+      <div class="clanak">
+        <form class="naslov">
+          <div>
+            <h1>Prijava za dom</h1>
+            <p>Ispunite navedene podatke kako bi se prijavili za dom</p>
+          </div>
+        <hr>
+        <div class="input_registracija">
+          <label for="text"><b>Ime</b></label>
+          <input type="text" placeholder="Upišite ime" name="ime" required><br>
+          <label for="text"><b>Prezime</b></label>
+          <input type="text" placeholder="Upišite prezime" name="prezime" required><br>         
+          <label for="text"><b>Korisničko ime</b></label>
+          <input type="text" placeholder="Upišite korisničko ime" name="korIme" required><br>  
+          <label for="psw"><b>Lozinka</b></label>
+          <input type="password" placeholder="Upišite Lozinku" name="loz" required><br>  
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Upišite Email" name="email" required><br> 
+          <label for="text"><b>Adresa</b></label>
+          <input type="text" placeholder="Upišite Adresu" name="adresa" required><br>  
+          <label for="text"><b>Grad</b></label>
+          <input type="text" placeholder="Upišite Grad" name="grad" required><br>
+          <label for="text"><b>Država</b></label>
+          <input type="text" placeholder="Upišite Državu" name="drzava" required><br>
+          <label for="text"><b>Telefonski broj</b></label>
+          <input type="text" placeholder="Upišite Tel. broj" name="broj" required><br>
+          <label for="text"><b>Iksica</b></label>
+          <input type="text" placeholder="Upišite Iksicu" name="iksica" required><br>
+          <label for="text"><b>Studij</b></label>
+          <input list="text" placeholder="Upisite Studij" name="studij" required><br>
+          <label for="text"><b>Prosjek</b></label>
+          <input list="text" placeholder="Upisite Prosjek" name="prosjek" required><br>
+          <label for="text"><b>Prvi odabir sobe</b></label>
+          <select>
+              <option value="1">Dvokrevetna soba</option>
+              <option value="2">Trokrevetna soba</option>
+              <option value="3">Četverokrevetna soba s kupaonom</option>
+              <option value="4">Četverokrevetna soba</option>
+            </select><br>
+          <label for="text"><b>Drugi odabir sobe</b></label>
+          <select>
+              <option value="1">Dvokrevetna soba</option>
+              <option value="2">Trokrevetna soba</option>
+              <option value="3">Četverokrevetna soba s kupaonom</option>
+              <option value="4">Četverokrevetna soba</option>
+            </select><br>
+          <label for="text"><b>Treći odabir sobe</b></label>
+          <select>
+              <option value="1">Dvokrevetna soba</option>
+              <option value="2">Trokrevetna soba</option>
+              <option value="3">Četverokrevetna soba s kupaonom</option>
+              <option value="4">Četverokrevetna soba</option>
+            </select><br>
+          <label for="text"><b>Subvencija</b>
+          <input type="checkbox" checked="checked" name="Subvencija">
+          </label>
+            
+      </div>
+        
+      <div class="clear"></div>
+      <div class="clearfix">
+        <button type="button" class="cancelbtn">Otkaži prijavu</button>
+        <button type="submit" class="prijavaDom">Prijavi se za dom</button>
+      </div>
+    </div>
+  </form>
+  </div>
+</div><!-- /.container -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

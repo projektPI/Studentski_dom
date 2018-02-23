@@ -1,9 +1,12 @@
 <section class="sadrzaj">
     <article id="greske"> {$greska} </article>
     <article id="ispisKorisnika">
-        <h2 style="text-align: center" >Korisnici</h2>
  
         <div id="table-container"> 
+               <div>
+            <h1>Računi</h1>
+          </div>
+        <hr>
              <table border="1">
                  <thead>
                      <tr>

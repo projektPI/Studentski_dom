@@ -24,17 +24,8 @@
         <aside><nav>
                 <ul>
                     <li><a href="index.php" >Početna stranica</a></li>
+                    <li><a href="prijava.php" >Prijava</a></li>
                     <li><a href="registracija.php" >Registracija</a></li>
-                    <li><a href="rangLista.php" >Rang lista</a></li>
-                    <li><a href="ispisZaposlenika.php" >Zaposlenici</a></li>
-                    <li><a href="ispisKorisnika.php" >Korisnici</a></li>
-                    <li><a href="azuriranje.php" >Ažuriranje korisnika</a></li>
-                    <li><a href="prijavaKvara.php" >Prijava kvara</a></li>
-                    <li><a href="biljezenjeGostiju.php" >Bilježenje vanjskih gostiju</a></li>
-                    <li><a href="mojiRacuni.php" >Moji računi   </a></li>
-                    <li><a href="zahtjevZaIzlazak.php" >Zahtjev za izlazak </a></li>
-                    <li><a href="izdavanjeRacuna.php" >Izdavanje računa </a></li>
-
                 </ul>
             </nav>
         </aside>

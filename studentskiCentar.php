@@ -19,6 +19,12 @@ if ($tipKorisnikaPrijava!=1) {
     header("Location:prijava.php");
 }
 $prijavljeniKorisnik = $_SESSION['id_korisnik'];
+$upit = "select k.*"
+        . "from korisnik as k "
+        . "where k.ID_korisnik='$prijavljeniKorisnik'";
+$rez = $baza->selectDB($upit);
+$korisnik = mysqli_fetch_array($rez);
+
 $upit="select r.*,s.*,k.*"
       . "from racun as r join studentskiCentar as s "
       . "on r.ID_racun=s.racun "
@@ -26,7 +32,6 @@ $upit="select r.*,s.*,k.*"
         . "on k.ID_korisnik=r.korisnik "
         . "order by r.datum, k.prezime";
 $korisnici=$baza->selectDB($upit);
-
 require_once 'vanjske_biblioteke/smarty/libs/Smarty.class.php';
 require_once 'ukljuciSmarty.php';
 $smarty = new Smarty();
@@ -38,9 +43,10 @@ $smarty->assign(array(
    'korisnik'=>$korisnik,
    'korisnici'=>$korisnici
 ));
-$smarty->display('_header.tpl');
-$smarty->display('studentskiCentar.tpl');
-$smarty->display('_footer.tpl');
+if($tipKorisnikaPrijava=='1'){
+$smarty->display('_header_a_1.tpl');
+}
+$smarty->display('studentskiCentar_1.tpl');
 ?>
 
 

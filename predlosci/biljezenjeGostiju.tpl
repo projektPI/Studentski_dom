@@ -5,7 +5,8 @@
     <h1>Bilježenje gostiju</h1>
     <article>
         <form name="kvar" id="kvar" method="POST" enctype='multipart/form-data' action="biljezenjeGostiju.php">
-
+<hr>
+            <div class="input_registracija">
             <label for="kategorija">Unesite broj sobe: </label><br>
             <input type="number" name="brojSobe" id="brojSobe"  placeholder="broj sobe"><br/><br>
             <label for="kategorija">Unesite posjetitelja/e: </label><br>
@@ -18,10 +19,11 @@
                     <option value="{$korisnik.ID_korisnik}">{$korisnik.prezime} {$korisnik.ime}</option>
                 {/foreach}
             </select><br><br>
-
+            </div>
+            <div class="clearfix">
             <input name="potvrda" id="potvrda" type="submit" value="Prijavi" class="gumb">   
             <input name="reset" id="reset" type="reset" value="Reset" class="gumb">  
-
+ </div>
         </form>
         <h1>Bilježenje odlazaka</h1>
         <form name="kvar" id="kvar" method="POST" enctype='multipart/form-data' action="biljezenjeGostiju1.php">

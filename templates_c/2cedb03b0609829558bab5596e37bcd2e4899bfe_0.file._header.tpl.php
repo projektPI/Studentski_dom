@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.22-dev/30, created on 2018-02-17 18:59:48
+<?php /* Smarty version 3.1.22-dev/30, created on 2018-02-21 15:46:35
          compiled from "predlosci/_header.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:3589666425a886d942283a4_63237766%%*/
+/*%%SmartyHeaderCode:7588467385a8d864b7ad431_81255354%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,21 +9,21 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '2cedb03b0609829558bab5596e37bcd2e4899bfe' => 
     array (
       0 => 'predlosci/_header.tpl',
-      1 => 1518890385,
+      1 => 1519224320,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '3589666425a886d942283a4_63237766',
+  'nocache_hash' => '7588467385a8d864b7ad431_81255354',
   'has_nocache_code' => false,
   'version' => '3.1.22-dev/30',
-  'unifunc' => 'content_5a886d9424b637_11313552',
+  'unifunc' => 'content_5a8d864b7d0c67_43832366',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5a886d9424b637_11313552')) {
-function content_5a886d9424b637_11313552 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5a8d864b7d0c67_43832366')) {
+function content_5a8d864b7d0c67_43832366 ($_smarty_tpl) {
 ?>
 <?php
-$_smarty_tpl->properties['nocache_hash'] = '3589666425a886d942283a4_63237766';
+$_smarty_tpl->properties['nocache_hash'] = '7588467385a8d864b7ad431_81255354';
 ?>
 <!DOCTYPE html>
 <html>
@@ -53,17 +53,8 @@ $_smarty_tpl->properties['nocache_hash'] = '3589666425a886d942283a4_63237766';
         <aside><nav>
                 <ul>
                     <li><a href="index.php" >Početna stranica</a></li>
+                    <li><a href="prijava.php" >Prijava</a></li>
                     <li><a href="registracija.php" >Registracija</a></li>
-                    <li><a href="rangLista.php" >Rang lista</a></li>
-                    <li><a href="ispisZaposlenika.php" >Zaposlenici</a></li>
-                    <li><a href="ispisKorisnika.php" >Korisnici</a></li>
-                    <li><a href="azuriranje.php" >Ažuriranje korisnika</a></li>
-                    <li><a href="prijavaKvara.php" >Prijava kvara</a></li>
-                    <li><a href="biljezenjeGostiju.php" >Bilježenje vanjskih gostiju</a></li>
-                    <li><a href="mojiRacuni.php" >Moji računi   </a></li>
-                    <li><a href="zahtjevZaIzlazak.php" >Zahtjev za izlazak </a></li>
-                    <li><a href="izdavanjeRacuna.php" >Izdavanje računa </a></li>
-
                 </ul>
             </nav>
         </aside>

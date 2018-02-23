@@ -1,5 +1,7 @@
-<section class="sadrzaj">
-    <article id="greske"> {$greska} </article>
+<section style=" margin-top: 10%; margin-left: 60%;">
+    <article id="greske" > 
+        {$greska} </article>
+   </section>     
     <article id="ispisKorisnika">
         <h2 style="text-align: center" >Korisnici</h2>
  
@@ -24,7 +26,7 @@
                     <th>Prezime</th>
                     <th>Korisničko ime</th>
                     <th>Email</th>
-                    <th>Datum</th>
+                    <th>Datum prijave</th>
                     <th>Studij</th>
                     <th>Prosjek</th>
                     </tr>
@@ -46,5 +48,5 @@
              </table><br>
         </div>
     </article>
-</section>
+
        

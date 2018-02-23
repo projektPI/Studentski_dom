@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.22-dev/30, created on 2018-02-19 19:02:13
+<?php /* Smarty version 3.1.22-dev/30, created on 2018-02-22 14:53:02
          compiled from "predlosci/rangLista.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:2185927145a8b11259e2e41_44262149%%*/
+/*%%SmartyHeaderCode:7848014505a8ecb3e46bf21_37513658%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '4b685bf05425382237631f96e3cf171a24b0dc90' => 
     array (
       0 => 'predlosci/rangLista.tpl',
-      1 => 1518977118,
+      1 => 1519307580,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2185927145a8b11259e2e41_44262149',
+  'nocache_hash' => '7848014505a8ecb3e46bf21_37513658',
   'variables' => 
   array (
     'greska' => 0,
@@ -22,14 +22,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.22-dev/30',
-  'unifunc' => 'content_5a8b1125a620b5_94154486',
+  'unifunc' => 'content_5a8ecb3e4a5083_01187152',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5a8b1125a620b5_94154486')) {
-function content_5a8b1125a620b5_94154486 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5a8ecb3e4a5083_01187152')) {
+function content_5a8ecb3e4a5083_01187152 ($_smarty_tpl) {
 ?>
 <?php
-$_smarty_tpl->properties['nocache_hash'] = '2185927145a8b11259e2e41_44262149';
+$_smarty_tpl->properties['nocache_hash'] = '7848014505a8ecb3e46bf21_37513658';
 ?>
 <section class="sadrzaj">
     <article id="greske"> <?php echo $_smarty_tpl->tpl_vars['greska']->value;?>
@@ -58,7 +58,7 @@ $_smarty_tpl->properties['nocache_hash'] = '2185927145a8b11259e2e41_44262149';
                     <th>Prezime</th>
                     <th>Korisničko ime</th>
                     <th>Email</th>
-                    <th>Datum</th>
+                    <th>Datum prijave</th>
                     <th>Studij</th>
                     <th>Prosjek</th>
                     </tr>

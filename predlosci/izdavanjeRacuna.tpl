@@ -17,7 +17,7 @@
             <input type="date" id="e" name="datum"  size="20" placeholder="ime" readonly value="Date()"><br><br>
 
             <input name="potvrda" id="potvrda" type="submit" value="Izdaj račune" class="gumb">  
-
+        </form>
             </article> 
             </section>
             

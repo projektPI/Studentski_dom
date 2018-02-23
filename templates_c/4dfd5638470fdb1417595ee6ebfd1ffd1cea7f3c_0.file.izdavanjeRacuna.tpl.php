@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.22-dev/30, created on 2018-02-17 19:15:35
+<?php /* Smarty version 3.1.22-dev/30, created on 2018-02-22 14:48:12
          compiled from "predlosci/izdavanjeRacuna.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:12496202805a8871475da986_21142520%%*/
+/*%%SmartyHeaderCode:8440303175a8eca1cae2183_09209500%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '4dfd5638470fdb1417595ee6ebfd1ffd1cea7f3c' => 
     array (
       0 => 'predlosci/izdavanjeRacuna.tpl',
-      1 => 1518891316,
+      1 => 1519307107,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '12496202805a8871475da986_21142520',
+  'nocache_hash' => '8440303175a8eca1cae2183_09209500',
   'variables' => 
   array (
     'greska' => 0,
@@ -22,14 +22,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.22-dev/30',
-  'unifunc' => 'content_5a887147609c91_00082511',
+  'unifunc' => 'content_5a8eca1cb25cc5_35191165',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5a887147609c91_00082511')) {
-function content_5a887147609c91_00082511 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5a8eca1cb25cc5_35191165')) {
+function content_5a8eca1cb25cc5_35191165 ($_smarty_tpl) {
 ?>
 <?php
-$_smarty_tpl->properties['nocache_hash'] = '12496202805a8871475da986_21142520';
+$_smarty_tpl->properties['nocache_hash'] = '8440303175a8eca1cae2183_09209500';
 ?>
 <selection>
     <div id="greske">  <?php echo $_smarty_tpl->tpl_vars['greska']->value;?>
@@ -66,7 +66,7 @@ $_smarty_tpl->tpl_vars['korisnik'] = $foreachItemSav;
             <input type="date" id="e" name="datum"  size="20" placeholder="ime" readonly value="Date()"><br><br>
 
             <input name="potvrda" id="potvrda" type="submit" value="Izdaj račune" class="gumb">  
-
+        </form>
             </article> 
             </section>
             

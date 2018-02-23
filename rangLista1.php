@@ -10,15 +10,20 @@ $danasnjiDatum = date("Y/m/d");
 $danasnjeVrijeme = date("H:i:s");
 $datum="";
 $brojMjesta="";
-//$korisnik=$_SESSION['korisnik'];
+$prijavljeniKorisnik=$_SESSION['id_korisnik'];
 $tipKorisnikaPrijava=$_SESSION['tipKorisnika'];
 
 if ($tipKorisnikaPrijava!=2) {
     $greska="Morate biti prijavljeni!";
     header("Location:prijava.php");
 }
+$upit = "select k.*"
+        . "from korisnik as k "
+        . "where k.ID_korisnik='$prijavljeniKorisnik'";
+$rez = $baza->selectDB($upit);
+$korisnik = mysqli_fetch_array($rez);
 //dohvati rang lista promjene
-$dohvatiVrijednosti=" Select r.datum, r.limit "
+$dohvatiVrijednosti=" Select r.datum, r.brojMjesta "
         . "from rangLista r "
         . "where r.idRangLista='1'";
 $iznos = $baza->selectDB($dohvatiVrijednosti);
@@ -45,9 +50,15 @@ $smarty->assign(array(
     'korisnik' => $korisnik,
     'korisnici' => $korisnici
 ));
-$smarty->display('_header.tpl');
-$smarty->display('rangLista1.tpl');
-$smarty->display('_footer.tpl');
+
+if($tipKorisnikaPrijava=='2'){
+$smarty->display('_header_s_1.tpl');
+}
+if($tipKorisnikaPrijava=='3'){
+$smarty->display('_header_p_1.tpl');
+}
+$smarty->display('rangLista1_1.tpl');
+//$smarty->display('_footer.tpl');
 ?>
 
 

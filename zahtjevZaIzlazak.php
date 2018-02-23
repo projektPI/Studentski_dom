@@ -12,13 +12,20 @@ if (!isset($_SESSION['korisnickoIme'])) {
     //exit();
 }
 $korisnikID = $_SESSION['id_korisnik'];
+$tipKorisnikaPrijava=$_SESSION['tipKorisnika'];
+$upit = "select k.*"
+        . "from korisnik as k "
+        . "where k.ID_korisnik='$korisnikID'";
+$rez = $baza->selectDB($upit);
+$korisnik = mysqli_fetch_array($rez);
 
 $upit = "select k.ID_korisnik, k.ime, k.prezime ,k.userName, u.od, u.* "
         . "from korisnik k join unajmljeno as u "
         . "on k.ID_korisnik=u.korisnik "
         . "where k.ID_korisnik='$korisnikID'";
 $korisnici = $baza->selectDB($upit);
-$korisnik = mysqli_fetch_array($korisnici);
+$korisnik2 = mysqli_fetch_array($korisnici);
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $vrijemeDo = $_POST['do'];
 
@@ -47,10 +54,17 @@ $smarty->assign('greska', $greska);
 $smarty->assign(array(
     'naslov' => 'Korisnici',
     'korisnik' => $korisnik,
+    'korisnik2' => $korisnik2,
 ));
-$smarty->display('_header.tpl');
-$smarty->display('zahtjevZaIzlazak.tpl');
-$smarty->display('_footer.tpl');
+
+if($tipKorisnikaPrijava=='2'){
+$smarty->display('_header_s_1.tpl');
+}
+if($tipKorisnikaPrijava=='3'){
+$smarty->display('_header_p_1.tpl');
+}
+$smarty->display('zahtjevZaIzlazak_1.tpl');
+//$smarty->display('_footer.tpl');
 ?>
 
 

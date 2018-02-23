@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.22-dev/30, created on 2018-02-20 18:32:03
+<?php /* Smarty version 3.1.22-dev/30, created on 2018-02-21 16:30:54
          compiled from "predlosci/azuriranje.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:10546619455a8c5b93817a97_42375570%%*/
+/*%%SmartyHeaderCode:18986829555a8d90ae5d4e27_66919879%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '839574db393b9e41cc8c0d6d64a14d2cb0aa5260' => 
     array (
       0 => 'predlosci/azuriranje.tpl',
-      1 => 1519147922,
+      1 => 1519227043,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '10546619455a8c5b93817a97_42375570',
+  'nocache_hash' => '18986829555a8d90ae5d4e27_66919879',
   'variables' => 
   array (
     'greska' => 0,
@@ -25,14 +25,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.22-dev/30',
-  'unifunc' => 'content_5a8c5b9385ad25_02483442',
+  'unifunc' => 'content_5a8d90ae627c30_36635775',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5a8c5b9385ad25_02483442')) {
-function content_5a8c5b9385ad25_02483442 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5a8d90ae627c30_36635775')) {
+function content_5a8d90ae627c30_36635775 ($_smarty_tpl) {
 ?>
 <?php
-$_smarty_tpl->properties['nocache_hash'] = '10546619455a8c5b93817a97_42375570';
+$_smarty_tpl->properties['nocache_hash'] = '18986829555a8d90ae5d4e27_66919879';
 ?>
 <selection>
     <div id="greske">  <?php echo $_smarty_tpl->tpl_vars['greska']->value;?>
@@ -42,10 +42,10 @@ $_smarty_tpl->properties['nocache_hash'] = '10546619455a8c5b93817a97_42375570';
     <h1>Ažuriranje korisnika</h1>
     <article>
         <form name="biraniKorisnik" id="kvar" method="POST" enctype='multipart/form-data' action="azuriranje.php">
-
+            
+            <?php if (($_smarty_tpl->tpl_vars['tipKorisnikaPrijava']->value=='1')) {?>
             <label for="biraniKorisnik">Izaberite korisnika: </label><br>
             <select name="korisnici" id="korisnici">
-                <?php if (($_smarty_tpl->tpl_vars['tipKorisnikaPrijava']->value=='1')) {?>
                 <?php
 $_from = $_smarty_tpl->tpl_vars['korisnici']->value;
 if (!is_array($_from) && !is_object($_from)) {
@@ -68,8 +68,9 @@ $_smarty_tpl->tpl_vars['korisnik'] = $foreachItemSav;
                 <?php }?>
             </select><br>
         <br>
+            <?php if (($_smarty_tpl->tpl_vars['tipKorisnikaPrijava']->value=='1')) {?>
             <label for="kategorija">Ime: </label>
-            <input type="text" id="ime" name="ime"  size="20" placeholder="ime" <?php if (isset($_smarty_tpl->tpl_vars['korisnik']->value['ime'])) {?>value="<?php echo $_smarty_tpl->tpl_vars['korisnik']->value['ime'];
+            <input type="text" id="ime" name="ime"  size="20" placeholder="ime" <?php if (isset($_smarty_tpl->tpl_vars['korisnik']->value['ime'])) {?> value="<?php echo $_smarty_tpl->tpl_vars['korisnik']->value['ime'];
 }?>"><br>
             <label for="kategorija">Prezime: </label>
             <input type="text" id="prez" name="prez"  size="20" placeholder="prezime" <?php if (isset($_smarty_tpl->tpl_vars['korisnik']->value['prezime'])) {?>value="<?php echo $_smarty_tpl->tpl_vars['korisnik']->value['prezime'];
@@ -121,6 +122,43 @@ $_smarty_tpl->tpl_vars['korisnik2'] = $foreachItemSav;
 }
 ?>
             </select><br>
+            <?php }?>
+            <?php if (($_smarty_tpl->tpl_vars['tipKorisnikaPrijava']->value!='1')) {?>
+               <label for="kategorija">Ime: </label>
+            <input type="text" id="ime" name="ime"  size="20" placeholder="ime" <?php if (isset($_smarty_tpl->tpl_vars['korisnik2']->value['ime'])) {?> value="<?php echo $_smarty_tpl->tpl_vars['korisnik2']->value['ime'];
+}?>"><br>
+            <label for="kategorija">Prezime: </label>
+            <input type="text" id="prez" name="prez"  size="20" placeholder="prezime" <?php if (isset($_smarty_tpl->tpl_vars['korisnik2']->value['prezime'])) {?>value="<?php echo $_smarty_tpl->tpl_vars['korisnik2']->value['prezime'];
+}?>"><br>
+            <label for="kategorija">Korisničko ime: </label>
+            <input type="text" id="korime" name="korime"  size="20" placeholder="korisničko ime" <?php if (isset($_smarty_tpl->tpl_vars['korisnik2']->value['userName'])) {?>value="<?php echo $_smarty_tpl->tpl_vars['korisnik2']->value['userName'];
+}?>"><br>
+            <label for="psw">Lozinka</b></label>
+            <input type="password" placeholder="Lozinka" name="lozinka"  <?php if (isset($_smarty_tpl->tpl_vars['korisnik2']->value['password'])) {?>value="<?php echo $_smarty_tpl->tpl_vars['korisnik2']->value['password'];
+}?>"><br>
+            <label for="kategorija">Email: </label>
+            <input type="email" id="email" name="email"  size="20" placeholder="email"<?php if (isset($_smarty_tpl->tpl_vars['korisnik2']->value['email'])) {?>value="<?php echo $_smarty_tpl->tpl_vars['korisnik2']->value['email'];
+}?>"><br>
+            <label for="kategorija">Adresa: </label>
+            <input type="text" id="adresa" name="adresa"  size="20" placeholder="adresa"<?php if (isset($_smarty_tpl->tpl_vars['korisnik2']->value['adresa'])) {?>value="<?php echo $_smarty_tpl->tpl_vars['korisnik2']->value['adresa'];
+}?>"><br>
+            <label for="kategorija">Mjesto: </label>
+            <input type="text" id="mjesto" name="mjesto"  size="20" placeholder="mjesto"<?php if (isset($_smarty_tpl->tpl_vars['korisnik2']->value['mjesto'])) {?>value="<?php echo $_smarty_tpl->tpl_vars['korisnik2']->value['mjesto'];
+}?>"><br>
+            <label for="kategorija">Država: </label>
+            <input type="text" id="drzava" name="drzava"  size="20" placeholder="država"<?php if (isset($_smarty_tpl->tpl_vars['korisnik2']->value['drzava'])) {?>value="<?php echo $_smarty_tpl->tpl_vars['korisnik2']->value['drzava'];
+}?>"><br>
+            <label for="kategorija">Telefon: </label>
+            <input type="numbers" id="tel" name="tel"  size="20" placeholder="telefon"<?php if (isset($_smarty_tpl->tpl_vars['korisnik2']->value['telefon'])) {?>value="<?php echo $_smarty_tpl->tpl_vars['korisnik2']->value['telefon'];
+}?>"><br>
+            <label for="kategorija">xica: </label>
+            <input type="numbers" id="xica" name="xica"  size="20" placeholder="xica"<?php if (isset($_smarty_tpl->tpl_vars['korisnik2']->value['xica'])) {?>value="<?php echo $_smarty_tpl->tpl_vars['korisnik2']->value['xica'];
+}?>"><br>
+            <label for="kategorija">Tip korisnika: </label>
+             <input type="text" id="drzava" name="tip"  size="20" placeholder="država" readonly <?php if (isset($_smarty_tpl->tpl_vars['korisnik2']->value['naziv'])) {?>value="<?php echo $_smarty_tpl->tpl_vars['korisnik2']->value['naziv'];
+}?>"><br>
+            
+            <?php }?>
             <input name="azuriraj" id="azuriraj" type="submit" value="Ažuriraj" class="gumb">   
             <input name="reset" id="reset" type="reset" value="Reset" class="gumb">  
 

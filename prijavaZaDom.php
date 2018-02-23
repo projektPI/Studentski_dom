@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 header('Content-Type: text/html; charset=utf-8');
 include_once './baza.class.php';
@@ -185,9 +184,15 @@ $smarty->assign(array(
     'korisnik' => $korisnik,
     'korisnici' => $korisnici
 ));
-$smarty->display('_header.tpl');
-$smarty->display('prijavaZaDom.tpl');
-$smarty->display('_footer.tpl');
+
+if($tipKorisnikaPrijava=='2'){
+$smarty->display('_header_s_1.tpl');
+}
+if($tipKorisnikaPrijava=='3'){
+$smarty->display('_header_p_1.tpl');
+}
+$smarty->display('prijavaZaDom_1.tpl');
+//$smarty->display('_footer.tpl');
 ?>
 
 

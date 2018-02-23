@@ -26,6 +26,7 @@ $upit = "select k.ID_korisnik,k.prezime,k.ime "
         . "where t.ID_tipKorisnika=2 or t.ID_tipKorisnika=3 "
         . "order by 2";
 $korisnici = $baza->selectDB($upit);
+$korisnik = mysqli_fetch_array($korisnici);
 $upit1 = "select e.* from evidencija as e "
         . "where e.provjera=0";
 $korisnici1 = $baza->selectDB($upit1);
@@ -67,7 +68,13 @@ $smarty->assign(array(
     'korisnik1' => $korisnik1,
     'korisnici1' => $korisnici1,
 ));
-$smarty->display('_header.tpl');
-$smarty->display('biljezenjeGostiju.tpl');
-$smarty->display('_footer.tpl');
+
+if($tipKorisnikaPrijava=='1'){
+$smarty->display('_header_a_1.tpl');
+}
+if($tipKorisnikaPrijava=='4'){
+$smarty->display('_header_r_1.tpl');
+}
+$smarty->display('biljezenjeGostiju_1.tpl');
+//$smarty->display('_footer.tpl');
 ?>

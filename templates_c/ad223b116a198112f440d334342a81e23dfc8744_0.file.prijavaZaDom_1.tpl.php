@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.22-dev/30, created on 2018-02-19 18:34:02
+<?php /* Smarty version 3.1.22-dev/30, created on 2018-02-23 16:18:11
          compiled from "predlosci/prijavaZaDom_1.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:13642726395a8b0a8a8c7aa8_66368791%%*/
+/*%%SmartyHeaderCode:10617723255a9030b3e12b38_39956833%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ad223b116a198112f440d334342a81e23dfc8744' => 
     array (
       0 => 'predlosci/prijavaZaDom_1.tpl',
-      1 => 1519061628,
+      1 => 1519397210,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '13642726395a8b0a8a8c7aa8_66368791',
+  'nocache_hash' => '10617723255a9030b3e12b38_39956833',
   'variables' => 
   array (
     'greska' => 0,
@@ -22,26 +22,28 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.22-dev/30',
-  'unifunc' => 'content_5a8b0a8a904503_85433936',
+  'unifunc' => 'content_5a9030b3e53545_28438910',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5a8b0a8a904503_85433936')) {
-function content_5a8b0a8a904503_85433936 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5a9030b3e53545_28438910')) {
+function content_5a9030b3e53545_28438910 ($_smarty_tpl) {
 ?>
 <?php
-$_smarty_tpl->properties['nocache_hash'] = '13642726395a8b0a8a8c7aa8_66368791';
+$_smarty_tpl->properties['nocache_hash'] = '10617723255a9030b3e12b38_39956833';
 ?>
-<section class="sadrzaj">
-    <article id="greske"> <?php echo $_smarty_tpl->tpl_vars['greska']->value;?>
- </article>
-    <article id="ispisKorisnika">
-        <div class="container">
-            <div class="clanak">
-                <div id="table-container"> 
-                    <form class="formaRegistracija" style="border:1px solid #ccc" method="POST" action="prijavaZaDom.php">
+
+
+    <div class="container-unos">
+        <selection>
+    <div id="greske">  <?php echo $_smarty_tpl->tpl_vars['greska']->value;?>
+ </div>
+</selection>
+      <div class="clanak">
+        <form class="naslov" method="POST" action="prijavaZaDom.php">
                         <h1>Prijava za dom</h1>
                         <p>Ispunite navedene podatke kako bi se prijavili za dom</p>
                         <hr>
+                        <div class="input_registracija">
                         <label for="text"><b>Ime</b></label>
                         <input type="text" placeholder="Upisite ime" name="ime" readonly <?php if (isset($_smarty_tpl->tpl_vars['korisnik']->value['ime'])) {?>value="<?php echo $_smarty_tpl->tpl_vars['korisnik']->value['ime'];
 }?>"> <br>
@@ -76,8 +78,13 @@ $_smarty_tpl->properties['nocache_hash'] = '13642726395a8b0a8a8c7aa8_66368791';
                             <label for="text"><b>Studij</b></label>
                             <input list="text" placeholder="Upisite Studij" name="studij" ><br>
                             <label for="text"><b>Prosjek</b></label>
-                            <input type="number" step="any"  placeholder="Upisite Prosjek" name="prosjek" ><br>
+                            <input type="number" step="any" min="2" max="5" placeholder="Upisite Prosjek" name="prosjek" ><br>
                         <?php }?>
+                        <?php if (($_smarty_tpl->tpl_vars['tipKorisnika']->value=='3')) {?>
+                        <label for="text"><b>Datum do: </b></label>
+                        <input type="date" placeholder="Upisite datum" name="datum"> <br>
+                         
+                        <?php }?> 
                         <label for="text"><b>Prvi odabir sobe</b></label>
                         <input list="browsers" name="prviSoba" required><br>
                         <label for="text"><b>Drugi odabir sobe</b></label>
@@ -101,19 +108,36 @@ $_smarty_tpl->properties['nocache_hash'] = '13642726395a8b0a8a8c7aa8_66368791';
                                 <option value="Jednokrevetna soba s kupaonom - 2">
                                 <?php }?>
                         </datalist> 
-
+</div>
                         <div class="clearfix">
-                            <input type="button" class="cancelbtn" value="Otkaži prijavu">
                             <input type="submit" class="prijavaDom" value="Prijavi se za dom">
+                            <button type="cancel" onclick="window.location='index.php';return false;">Otkaži</button>
                         </div>
 
                     </form>
-                </div>
-
-            </div>
-        </div>
-    </article>
-</section>
+    </div>
+ 
+  </div>
+</div><!-- /.container -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <?php echo '<script'; ?>
+ src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+>window.jQuery || document.write('<?php echo '<script'; ?>
+ src="../../assets/js/vendor/jquery.min.js"><\/script>')<?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="../../dist/js/bootstrap.min.js"><?php echo '</script'; ?>
+>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <?php echo '<script'; ?>
+ src="../../assets/js/ie10-viewport-bug-workaround.js"><?php echo '</script'; ?>
+>
+  </body>
+</html>
 <?php }
 }
 ?>

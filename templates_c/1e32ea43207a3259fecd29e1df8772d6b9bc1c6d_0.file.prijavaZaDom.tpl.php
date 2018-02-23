@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.22-dev/30, created on 2018-02-20 18:43:57
+<?php /* Smarty version 3.1.22-dev/30, created on 2018-02-21 14:13:44
          compiled from "predlosci/prijavaZaDom.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:3413527325a8c5e5d9b1274_66959343%%*/
+/*%%SmartyHeaderCode:6243153375a8d70888abb86_58463843%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1e32ea43207a3259fecd29e1df8772d6b9bc1c6d' => 
     array (
       0 => 'predlosci/prijavaZaDom.tpl',
-      1 => 1519148634,
+      1 => 1519168269,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '3413527325a8c5e5d9b1274_66959343',
+  'nocache_hash' => '6243153375a8d70888abb86_58463843',
   'variables' => 
   array (
     'greska' => 0,
@@ -22,14 +22,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.22-dev/30',
-  'unifunc' => 'content_5a8c5e5d9ecd89_10600193',
+  'unifunc' => 'content_5a8d7088bf7662_55122016',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5a8c5e5d9ecd89_10600193')) {
-function content_5a8c5e5d9ecd89_10600193 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5a8d7088bf7662_55122016')) {
+function content_5a8d7088bf7662_55122016 ($_smarty_tpl) {
 ?>
 <?php
-$_smarty_tpl->properties['nocache_hash'] = '3413527325a8c5e5d9b1274_66959343';
+$_smarty_tpl->properties['nocache_hash'] = '6243153375a8d70888abb86_58463843';
 ?>
 <section class="sadrzaj">
     <article id="greske"> <?php echo $_smarty_tpl->tpl_vars['greska']->value;?>
@@ -76,7 +76,7 @@ $_smarty_tpl->properties['nocache_hash'] = '3413527325a8c5e5d9b1274_66959343';
                             <label for="text"><b>Studij</b></label>
                             <input list="text" placeholder="Upisite Studij" name="studij" ><br>
                             <label for="text"><b>Prosjek</b></label>
-                            <input type="number" step="any"  placeholder="Upisite Prosjek" name="prosjek" ><br>
+                            <input type="number" step="any" min="1" max="5" placeholder="Upisite Prosjek" name="prosjek" ><br>
                         <?php }?>
                         <?php if (($_smarty_tpl->tpl_vars['tipKorisnika']->value=='3')) {?>
                         <label for="text"><b>Datum do: </b></label>

@@ -10,29 +10,37 @@ $danasnjiDatum = date("Y/m/d");
 $danasnjeVrijeme = date("H:i:s");
 $datum="";
 $brojMjesta="";
-//$korisnik=$_SESSION['korisnik'];
+
+$korisnikID = $_SESSION['id_korisnik'];
 $tipKorisnikaPrijava=$_SESSION['tipKorisnika'];
 
 if ($tipKorisnikaPrijava!=1) {
-    $greska="Samo recepcionar i administrator mogu prostupiti";
+    $greska="Samo recepcionar i administrator mogu prostupiti<br>";
     header("Location:prijava.php");
 }
-
+$upit = "select k.*"
+        . "from korisnik as k "
+        . "where k.ID_korisnik='$korisnikID'";
+$rez = $baza->selectDB($upit);
+$korisnik = mysqli_fetch_array($rez);
 
 $upit = "select k.ime,k.prezime,k.userName,k.email, p.datum, p.studij, p.prosjek "
         . "from korisnik as k join prijava as p on k.ID_korisnik=p.korisnik "
         . "where p.datum<='$danasnjiDatum' and k.tipKorisnika='2'"
         . "order by p.prosjek desc";
 $korisnici = $baza->selectDB($upit);
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $vrijeme="00:00:00";
+    //$vrijeme="00:00:00";
     $datum = $_POST['datum'];
     $brojMjesta = $_POST['brojMjesta'];
-    $vrijeme = date('H:i:s', strtotime($_POST['vrijeme']));
 
+    //provjeri jel postoji rang lista
+    $provjeri = "select r.*"
+           . "from rangLista as r";
+$izv = $baza->selectDB($provjeri);
+ if ($izv->num_rows == 0) {
     if (empty($brojMjesta)) {
-        $greska = "Unesite broj mjesta!";
+        $greska = "Unesite broj mjesta!<br>";
     } else {
         //ako nije unesen novi onda se zakljuca na danasnji
         if(empty($datum)){
@@ -216,6 +224,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 }
+else{
+    $greska="Rang lista je već postavljena!<br>";
+}
+}
+
 
 require_once 'vanjske_biblioteke/smarty/libs/Smarty.class.php';
 require_once 'ukljuciSmarty.php';
@@ -228,9 +241,12 @@ $smarty->assign(array(
     'korisnik' => $korisnik,
     'korisnici' => $korisnici
 ));
-$smarty->display('_header.tpl');
-$smarty->display('rangLista.tpl');
-$smarty->display('_footer.tpl');
+
+if($tipKorisnikaPrijava=='1'){
+$smarty->display('_header_a_1.tpl');
+}
+$smarty->display('rangLista_1.tpl');
+//$smarty->display('_footer.tpl');
 ?>
 
 

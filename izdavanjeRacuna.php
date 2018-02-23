@@ -23,6 +23,14 @@ $upit = "select t.* "
         . "where ID_tipKorisnika='2' or ID_tipKorisnika='3' "
         . "order by 2";
 $korisnici = $baza->selectDB($upit);
+$upit = "select k.ID_korisnik,k.prezime,k.ime "
+        . "from korisnik as k join tip_korisnika as t "
+        . "on k.tipKorisnika=t.ID_tipKorisnika "
+        . "where t.ID_tipKorisnika=2 or t.ID_tipKorisnika=3 "
+        . "order by 2";
+$rez = $baza->selectDB($upit);
+$korisnik = mysqli_fetch_array($rez);
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $podaci = "";
     $korisnik1 = "";
@@ -130,10 +138,17 @@ $smarty->assign('greska', $greska);
 $smarty->assign(array(
     'naslov' => 'Korisnici',
     'korisnici' => $korisnici,
+    'korisnik' => $korisnik
 ));
-$smarty->display('_header.tpl');
-$smarty->display('izdavanjeRacuna.tpl');
-$smarty->display('_footer.tpl');
+
+if($tipKorisnikaPrijava=='1'){
+$smarty->display('_header_a_1.tpl');
+}
+if($tipKorisnikaPrijava=='4'){
+$smarty->display('_header_r_1.tpl');
+}
+$smarty->display('izdavanjeRacuna_1.tpl');
+//$smarty->display('_footer.tpl');
 ?>
 
 

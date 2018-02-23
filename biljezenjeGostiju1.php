@@ -82,7 +82,13 @@ $smarty->assign(array(
     'korisnik1' => $korisnik1,
     'korisnici1' => $korisnici1,
 ));
-$smarty->display('_header.tpl');
-$smarty->display('biljezenjeGostiju.tpl');
-$smarty->display('_footer.tpl');
+
+if($tipKorisnikaPrijava=='1'){
+$smarty->display('_header_a_1.tpl');
+}
+if($tipKorisnikaPrijava=='4'){
+$smarty->display('_header_r_1.tpl');
+}
+$smarty->display('biljezenjeGostiju_1.tpl');
+//$smarty->display('_footer.tpl');
 ?>

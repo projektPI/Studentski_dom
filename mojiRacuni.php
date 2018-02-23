@@ -5,7 +5,6 @@ include_once './baza.class.php';
 $greska = "";
 $table="";
 $baza = new Baza();
-$korisnik=array();
 
 if (!isset($_SESSION['korisnickoIme'])) {
     $greska.= "Morate biti prijavljeni!<br>";
@@ -14,6 +13,14 @@ if (!isset($_SESSION['korisnickoIme'])) {
 }
 
 $prijavljeniKorisnik = $_SESSION['id_korisnik'];
+$tipKorisnikaPrijava=$_SESSION['tipKorisnika'];
+
+$upit = "select k.*"
+        . "from korisnik as k "
+        . "where k.ID_korisnik='$prijavljeniKorisnik'";
+$rez = $baza->selectDB($upit);
+$korisnik = mysqli_fetch_array($rez);
+
 $upit="select r.*"
       . "from racun as r join korisnik as k on k.ID_korisnik=r.korisnik "
       . "where k.ID_korisnik='$prijavljeniKorisnik'";
@@ -26,13 +33,17 @@ $obj = new UkljuciSmarty($smarty);
 $smarty->assign('greska', $greska);
 $smarty->assign('table', $table);
 $smarty->assign(array(
-   'naslov' =>'Korisnici' ,
+   'naslov' =>'Korisnici',
    'korisnik'=>$korisnik,
    'korisnici'=>$korisnici
 ));
-$smarty->display('_header.tpl');
-$smarty->display('mojiRacuni.tpl');
-$smarty->display('_footer.tpl');
+if($tipKorisnikaPrijava=='2'){
+$smarty->display('_header_s_1.tpl');
+}
+if($tipKorisnikaPrijava=='3'){
+$smarty->display('_header_p_1.tpl');
+}
+$smarty->display('mojiRacuni_1.tpl');
 ?>
 
 
