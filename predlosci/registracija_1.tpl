@@ -34,7 +34,7 @@
                 {foreach from=$korisnici item=korisnik}
                     <option selected value="{$korisnik.ID_tipKorisnika}">{$korisnik.naziv}</option>
                 {/foreach}
-            </select><br><br>
+            </select><br>
 </div>
 <div class="clearfix">
                 <input type="submit" class="signupbtn" value="Registriraj se">

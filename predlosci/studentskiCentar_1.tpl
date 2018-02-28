@@ -12,33 +12,29 @@
           <table class="ispisKorisnika" border="1" style="margin-left: -20%">
                  <thead>
                      <tr>
-                    <th>Ime</th>
-                    <th>Prezime</th>
-                    <th>Korisničko ime</th>
-                    <th>Email</th>
-                    <th>Adresa</th>
-                    <th>Mjesto</th>
-                    <th>Država</th>
-                    <th>Telefon</th>
-                    <th>Tip korisnika</th>
+                    <th>Korisnik</th>
+                    <th>Datum izdavanja</th>
+                    <th>Vrijeme izdavanja</th>
+                    <th>Iznos</th>
+                    <th>Obrađeno</th>
+                    <th>Plaćeno</th>
                     </tr>
                  </thead>
                  <tbody>
                      
                      {foreach from=$korisnici item=korisnik}
                          <tr>
-                             <td>{$korisnik.ID_racun}</td>
+                             <td>{$korisnik.prezime} {$korisnik.ime}</td>
                              <td>{$korisnik.datum}</td>
                              <td>{$korisnik.vrijeme}</td>
                              <td>{$korisnik.iznos}</td>
                              <td>{if ($korisnik.obradjeno==0)}ne {/if}</td>
                              <td>{if ($korisnik.placeno==0)}ne {/if}</td>
-                             <td>{$korisnik.prezime} {$korisnik.ime}</td>
                          </tr>
                          {/foreach}
                  </tbody>
              </table>
-      
+                 <br>
     </div><!-- /.container -->
 
 </div>

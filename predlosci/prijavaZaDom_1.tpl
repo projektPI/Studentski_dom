@@ -1,7 +1,7 @@
 
 
     <div class="container-unos">
-        <selection>
+        <selection style=" margin-top: 10%; margin-left: 60%;">
     <div id="greske">  {$greska} </div>
 </selection>
       <div class="clanak">

@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.22-dev/30, created on 2018-02-23 15:59:49
+<?php /* Smarty version 3.1.22-dev/30, created on 2018-02-27 14:08:08
          compiled from "predlosci/registracija_1.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:21267158285a902c6503e165_40131358%%*/
+/*%%SmartyHeaderCode:10176806005a955838e029e6_04458156%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9c5cc4ab89e2d1538ba740db9ad62f65cc4f1828' => 
     array (
       0 => 'predlosci/registracija_1.tpl',
-      1 => 1519397985,
+      1 => 1519736887,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '21267158285a902c6503e165_40131358',
+  'nocache_hash' => '10176806005a955838e029e6_04458156',
   'variables' => 
   array (
     'greska' => 0,
@@ -22,14 +22,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.22-dev/30',
-  'unifunc' => 'content_5a902c6506e556_97010760',
+  'unifunc' => 'content_5a9558391e1395_08836144',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5a902c6506e556_97010760')) {
-function content_5a902c6506e556_97010760 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5a9558391e1395_08836144')) {
+function content_5a9558391e1395_08836144 ($_smarty_tpl) {
 ?>
 <?php
-$_smarty_tpl->properties['nocache_hash'] = '21267158285a902c6503e165_40131358';
+$_smarty_tpl->properties['nocache_hash'] = '10176806005a955838e029e6_04458156';
 ?>
 
     <div class="container-unos">
@@ -83,7 +83,7 @@ $foreachItemSav = $_smarty_tpl->tpl_vars['korisnik'];
 $_smarty_tpl->tpl_vars['korisnik'] = $foreachItemSav;
 }
 ?>
-            </select><br><br>
+            </select><br>
 </div>
 <div class="clearfix">
                 <input type="submit" class="signupbtn" value="Registriraj se">

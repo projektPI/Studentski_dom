@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.22-dev/30, created on 2018-02-23 16:33:57
+<?php /* Smarty version 3.1.22-dev/30, created on 2018-02-26 16:40:57
          compiled from "predlosci/studentskiCentar_1.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:12223838865a903465011469_02030106%%*/
+/*%%SmartyHeaderCode:18522728285a942a896ace92_86711002%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b918f9359414a192fbe3d3841caa924afc09fc47' => 
     array (
       0 => 'predlosci/studentskiCentar_1.tpl',
-      1 => 1519400034,
+      1 => 1519659655,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '12223838865a903465011469_02030106',
+  'nocache_hash' => '18522728285a942a896ace92_86711002',
   'variables' => 
   array (
     'greska' => 0,
@@ -22,14 +22,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.22-dev/30',
-  'unifunc' => 'content_5a903465043952_59122698',
+  'unifunc' => 'content_5a942a896dfb26_88685290',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5a903465043952_59122698')) {
-function content_5a903465043952_59122698 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5a942a896dfb26_88685290')) {
+function content_5a942a896dfb26_88685290 ($_smarty_tpl) {
 ?>
 <?php
-$_smarty_tpl->properties['nocache_hash'] = '12223838865a903465011469_02030106';
+$_smarty_tpl->properties['nocache_hash'] = '18522728285a942a896ace92_86711002';
 ?>
 
 
@@ -46,15 +46,12 @@ $_smarty_tpl->properties['nocache_hash'] = '12223838865a903465011469_02030106';
           <table class="ispisKorisnika" border="1" style="margin-left: -20%">
                  <thead>
                      <tr>
-                    <th>Ime</th>
-                    <th>Prezime</th>
-                    <th>Korisničko ime</th>
-                    <th>Email</th>
-                    <th>Adresa</th>
-                    <th>Mjesto</th>
-                    <th>Država</th>
-                    <th>Telefon</th>
-                    <th>Tip korisnika</th>
+                    <th>Korisnik</th>
+                    <th>Datum izdavanja</th>
+                    <th>Vrijeme izdavanja</th>
+                    <th>Iznos</th>
+                    <th>Obrađeno</th>
+                    <th>Plaćeno</th>
                     </tr>
                  </thead>
                  <tbody>
@@ -71,7 +68,8 @@ $_smarty_tpl->tpl_vars['korisnik']->_loop = true;
 $foreachItemSav = $_smarty_tpl->tpl_vars['korisnik'];
 ?>
                          <tr>
-                             <td><?php echo $_smarty_tpl->tpl_vars['korisnik']->value['ID_racun'];?>
+                             <td><?php echo $_smarty_tpl->tpl_vars['korisnik']->value['prezime'];?>
+ <?php echo $_smarty_tpl->tpl_vars['korisnik']->value['ime'];?>
 </td>
                              <td><?php echo $_smarty_tpl->tpl_vars['korisnik']->value['datum'];?>
 </td>
@@ -81,9 +79,6 @@ $foreachItemSav = $_smarty_tpl->tpl_vars['korisnik'];
 </td>
                              <td><?php if (($_smarty_tpl->tpl_vars['korisnik']->value['obradjeno']==0)) {?>ne <?php }?></td>
                              <td><?php if (($_smarty_tpl->tpl_vars['korisnik']->value['placeno']==0)) {?>ne <?php }?></td>
-                             <td><?php echo $_smarty_tpl->tpl_vars['korisnik']->value['prezime'];?>
- <?php echo $_smarty_tpl->tpl_vars['korisnik']->value['ime'];?>
-</td>
                          </tr>
                          <?php
 $_smarty_tpl->tpl_vars['korisnik'] = $foreachItemSav;
@@ -91,7 +86,7 @@ $_smarty_tpl->tpl_vars['korisnik'] = $foreachItemSav;
 ?>
                  </tbody>
              </table>
-      
+                 <br>
     </div><!-- /.container -->
 
 </div>

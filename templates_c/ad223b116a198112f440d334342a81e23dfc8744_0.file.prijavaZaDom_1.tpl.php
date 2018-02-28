@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.22-dev/30, created on 2018-02-23 16:18:11
+<?php /* Smarty version 3.1.22-dev/30, created on 2018-02-26 15:27:35
          compiled from "predlosci/prijavaZaDom_1.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:10617723255a9030b3e12b38_39956833%%*/
+/*%%SmartyHeaderCode:19932810285a9419577044a9_11498414%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ad223b116a198112f440d334342a81e23dfc8744' => 
     array (
       0 => 'predlosci/prijavaZaDom_1.tpl',
-      1 => 1519397210,
+      1 => 1519655251,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '10617723255a9030b3e12b38_39956833',
+  'nocache_hash' => '19932810285a9419577044a9_11498414',
   'variables' => 
   array (
     'greska' => 0,
@@ -22,19 +22,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.22-dev/30',
-  'unifunc' => 'content_5a9030b3e53545_28438910',
+  'unifunc' => 'content_5a941957a6d258_37240118',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5a9030b3e53545_28438910')) {
-function content_5a9030b3e53545_28438910 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5a941957a6d258_37240118')) {
+function content_5a941957a6d258_37240118 ($_smarty_tpl) {
 ?>
 <?php
-$_smarty_tpl->properties['nocache_hash'] = '10617723255a9030b3e12b38_39956833';
+$_smarty_tpl->properties['nocache_hash'] = '19932810285a9419577044a9_11498414';
 ?>
 
 
     <div class="container-unos">
-        <selection>
+        <selection style=" margin-top: 10%; margin-left: 60%;">
     <div id="greske">  <?php echo $_smarty_tpl->tpl_vars['greska']->value;?>
  </div>
 </selection>
